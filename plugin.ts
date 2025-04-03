@@ -15,6 +15,7 @@ export class rspackPluginLocale implements RspackPluginInstance {
 
           Array.from(modules).forEach((module) => {
             compilation.rebuildModule(module, (err, rebuiltModule) => {
+              console.log(`Rebuilt ${rebuiltModule?.identifier()}.`);
               if (err) {
                 console.error(err)
               }
